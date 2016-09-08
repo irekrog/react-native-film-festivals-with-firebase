@@ -62,10 +62,8 @@ export default class ListFestivalView extends Component {
         loading: false,
         dataSource: items
       });
-
     });
   }
-
   render() {
     if (this.state.loading) {
       return (
