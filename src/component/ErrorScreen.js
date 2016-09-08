@@ -4,12 +4,9 @@ import {
   StyleSheet
 } from 'react-native';
 
-import HelloWorld from './HelloWorld';
-
 import {Container, Content, Header, Title} from 'native-base';
 
 export default class ListFestival extends Component {
-
 
   render() {
     return (
@@ -21,19 +18,12 @@ export default class ListFestival extends Component {
         </Header>
         <Content>
           <Text style={styles.error}>Error. Check the internet connection or try again later.</Text>
-       		<Text onPress={() => this.handlerClick()}>Test</Text>
         </Content>
       </Container>
     );
   }
 
-  handlerClick() {
-  		HelloWorld.greeting("Test");
-  }
 }
-
-
-
 
 const styles = StyleSheet.create({
   error: {

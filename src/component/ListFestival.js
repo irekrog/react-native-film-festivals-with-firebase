@@ -13,13 +13,12 @@ export default class ListFestival extends Component {
 
     this.navFirst = this.navFirst.bind(this);
     this.renderList = this.renderList.bind(this);
-
   }
 
   renderList(rowData) {
     return (
       <ListItem button onPress={() => this.navFirst(rowData)}>
-        <Text>{rowData.name}</Text>
+        <Text>{rowData.full_name}</Text>
       </ListItem>
     );
   }
@@ -28,11 +27,13 @@ export default class ListFestival extends Component {
     this.props.navigator.push({
       activeScreen: 'detailsScreen',
       filmData: {
-        name: rowData.name,
-        shortName: rowData.short_name,
+        fullName: rowData.full_name,
         city: rowData.city,
-        country: rowData.country,
-        url: rowData.url
+        voivodeship: rowData.voivodeship,
+        url: rowData.url,
+        lastOpeningDate: rowData.last_opening_date,
+        openingDate: rowData.opening_date,
+        endingDate: rowData.ending_date
       }
     });
   }

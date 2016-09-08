@@ -47,7 +47,6 @@ export default class ListFestivalView extends Component {
     this.listenForItems(this.itemsRef);
   }
 
-
   listenForItems(itemsRef) {
     itemsRef.on('value', (snap) => {
 
