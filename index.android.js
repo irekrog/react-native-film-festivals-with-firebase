@@ -7,9 +7,6 @@ import {
 import ListFestivalView from './src/view/ListFestivalView';
 import DetailsView from './src/view/DetailsView';
 
-
-
-
 class MainActivity extends Component {
 
   render() {
@@ -36,10 +33,12 @@ class MainActivity extends Component {
           <DetailsView
             navigator={navigator}
             title="detailsScreen"
-            name={route.filmData.name}
-            shortName={route.filmData.shortName}
+            fullName={route.filmData.fullName}
             city={route.filmData.city}
-            country={route.filmData.country}
+            voivodeship={route.filmData.voivodeship}
+            lastOpeningDate={route.filmData.lastOpeningDate}
+            openingDate={route.filmData.openingDate}
+            endingDate={route.filmData.endingDate}
             url={route.filmData.url}
           />);
     }
