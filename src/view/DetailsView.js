@@ -42,16 +42,22 @@ export default class Details extends Component {
         <Content>
           <List>
             <ListItem>
-              <Text>{this.props.name}</Text>
-            </ListItem>
-            <ListItem>
-              <Text>{this.props.shortName}</Text>
+              <Text>{this.props.fullName}</Text>
             </ListItem>
             <ListItem>
               <Text>{this.props.city}</Text>
             </ListItem>
             <ListItem>
-              <Text>{this.props.country}</Text>
+              <Text>{this.props.voivodeship}</Text>
+            </ListItem>
+            <ListItem>
+              <Text>{this.props.lastOpeningDate}</Text>
+            </ListItem>
+            <ListItem>
+              <Text>{this.props.openingDate}</Text>
+            </ListItem>
+            <ListItem>
+              <Text>{this.props.endingDate}</Text>
             </ListItem>
             <ListItem onPress={() => Linking.openURL(this.props.url)}>
               <Text style={styles.linkColor}>{this.props.url}</Text>

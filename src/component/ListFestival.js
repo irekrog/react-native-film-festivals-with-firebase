@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
 import {
   Text,
-  ListView
+  ListView,
+  StyleSheet,
+  Alert
 } from 'react-native';
 
-import {Container, Content, List, ListItem, Header, Title} from 'native-base';
+import {Container, Content, List, ListItem, Header, Title, Icon} from 'native-base';
+
+
 
 export default class ListFestival extends Component {
 
@@ -19,7 +23,7 @@ export default class ListFestival extends Component {
   renderList(rowData) {
     return (
       <ListItem button onPress={() => this.navFirst(rowData)}>
-        <Text>{rowData.name}</Text>
+        <Text>{rowData.full_name}</Text>
       </ListItem>
     );
   }
@@ -28,11 +32,13 @@ export default class ListFestival extends Component {
     this.props.navigator.push({
       activeScreen: 'detailsScreen',
       filmData: {
-        name: rowData.name,
-        shortName: rowData.short_name,
+        fullName: rowData.full_name,
         city: rowData.city,
-        country: rowData.country,
-        url: rowData.url
+        voivodeship: rowData.voivodeship,
+        url: rowData.url,
+        lastOpeningDate: rowData.last_opening_date,
+        openingDate: rowData.opening_date,
+        endingDate: rowData.ending_date
       }
     });
   }
@@ -44,12 +50,30 @@ export default class ListFestival extends Component {
           <Title>
             Film Festivals
           </Title>
+
         </Header>
+
         <Content>
+
           <List dataArray={this.props.data}
                 renderRow={this.renderList}/>
+          
+      	 	
         </Content>
       </Container>
     );
   }
+
+  
 }
+
+const styles = StyleSheet.create({
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: 'white',
+    position: 'absolute',
+    top: 0,
+    left: 0
+  },
+});
