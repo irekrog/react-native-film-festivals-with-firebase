@@ -41,3 +41,4 @@ android/app/libs
 android/keystores/debug.keystore
 
 src/config
+android/app/src/main/res/values/key.xml

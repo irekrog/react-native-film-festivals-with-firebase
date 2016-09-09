@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
-  Text,
-  ListView
+  Text
 } from 'react-native';
 
 import {Container, Content, List, ListItem, Header, Title} from 'native-base';
@@ -43,7 +42,7 @@ export default class ListFestival extends Component {
       <Container>
         <Header>
           <Title>
-            Film Festivals
+            Polish Film Festivals
           </Title>
         </Header>
         <Content>

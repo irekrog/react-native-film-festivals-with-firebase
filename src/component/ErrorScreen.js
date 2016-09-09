@@ -13,7 +13,7 @@ export default class ListFestival extends Component {
       <Container>
         <Header>
           <Title>
-            Film Festivals
+            Polish Film Festivals
           </Title>
         </Header>
         <Content>
