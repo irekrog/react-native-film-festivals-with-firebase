@@ -33,6 +33,10 @@ export default class ListFestival extends Component {
         lastOpeningDate: rowData.last_opening_date,
         openingDate: rowData.opening_date,
         endingDate: rowData.ending_date
+      },
+      mapData: {
+        latitude: rowData.latitude,
+        longitude: rowData.longitude
       }
     });
   }

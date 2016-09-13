@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-  View,
+  View
 } from 'react-native';
 
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -84,6 +84,4 @@ export default class ListFestivalView extends Component {
     }
   }
 }
-
-
 

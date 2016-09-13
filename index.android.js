@@ -6,21 +6,27 @@ import {
 
 import ListFestivalView from './src/view/ListFestivalView';
 import DetailsView from './src/view/DetailsView';
+import MapFestivalView from './src/view/MapFestivalView';
 
 class MainActivity extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <Navigator
         initialRoute={{activeScreen: 'listScreen'}}
         renderScene={MainActivity.navigatorRenderScene}
-        configureScene={(route, routeStack) =>
-          Navigator.SceneConfigs.HorizontalSwipeJump}
       />
     );
-  }
 
+  }
   static navigatorRenderScene(route, navigator) {
+
+    
+
     switch (route.activeScreen) {
       case 'listScreen':
         return (
@@ -41,6 +47,13 @@ class MainActivity extends Component {
             endingDate={route.filmData.endingDate}
             url={route.filmData.url}
           />);
+      case 'mapFestival':
+        return(
+          <MapFestivalView
+            navigator={navigator}
+            title='mapFestival'
+             />
+        )
     }
   }
 }
