@@ -23,9 +23,9 @@ class MainActivity extends Component {
     );
 
   }
+
   static navigatorRenderScene(route, navigator) {
 
-    
 
     switch (route.activeScreen) {
       case 'listScreen':
@@ -46,13 +46,17 @@ class MainActivity extends Component {
             openingDate={route.filmData.openingDate}
             endingDate={route.filmData.endingDate}
             url={route.filmData.url}
+            latitude={route.mapData.latitude}
+            longitude={route.mapData.longitude}
           />);
       case 'mapFestival':
-        return(
+        return (
           <MapFestivalView
             navigator={navigator}
             title='mapFestival'
-             />
+            latitude={route.mapData.latitude}
+            longitude={route.mapData.longitude}
+          />
         )
     }
   }
